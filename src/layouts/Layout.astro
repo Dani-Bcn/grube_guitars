@@ -1,7 +1,5 @@
 ---
-
-import Header from "../components/Header.astro";
-const { title } = Astro.props;
+import Header from "../components/header.astro"
 ---
 
 <!doctype html>
@@ -18,37 +16,13 @@ const { title } = Astro.props;
     <meta name="Grube_guitars" />
   </head>
   <body>
-    <Header />
+	<Header/>
     <slot />
   </body>
 </html>
-<style is:global>
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-  }
+
+<style>
   html {
-    font-family: system-ui, sans-serif;
-    background: #13151a;
-    background-size: 224px;
-    color-scheme: dark;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
+    background-color: rgb(17, 17, 17);
   }
 </style>
