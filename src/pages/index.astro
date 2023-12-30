@@ -6,13 +6,14 @@ import CustomGuitars from "../components/Custom_guitars.astro"
 ---
 
 <Layout title="Grube_guitars">
-  <main class="w-full  flex flex-col justify-beetwen items-center"> 
-    <div id="back_triangle" class="absolute w-full h-[100vh] -mt-36 bg-indigo-500/[0.1] "></div>
-    <h1 class="z-50 lg:h-40 h-52 text-7xl mt-32 lg:my-0 md:text-9xl lg:text-9xl font-dancing lg:mt-10  md:mt-40 md:my-20
+  <main class="w-full  flex flex-col justify-center items-center"> 
+    <CustomGuitars/> 
+    <div id="back_triangle" class=" w-[90vw] h-[110vh] absolute  md:-mt-96 bg-indigo-500/[0.1] "></div>
+    <h1 class="z-50 lg:h-40 h-52 text-7xl mt-32 lg:-my-16 md:text-9xl lg:text-9xl font-dancing lg:mt-20 md:mt-52  md:-my-16
     bg-gradient-to-l from-red-600 to-blue-600 text-transparent bg-clip-text
-    ">Grubeguitars</h1>
+    ">Grubeguitars</h1>    
 	  <CardAbout/>  
-    <CustomGuitars/>
+
   </main> 
 </Layout>
 
