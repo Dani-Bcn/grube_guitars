@@ -1,41 +1,45 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Title from "../components/title.astro"
+import CardAbout from "../components/Card_about.astro";
 ---
 
 <Layout title="Grube_guitars">
-  <main class="overflow-x-hidden ">
-	<div class="back">
-		<div class="ball-back-violet"></div>
-		<div class="ball-back-green"></div>
-		<Title/>
-	</div>    
+  <main class="w-full  flex flex-col justify-center items-center">
+ 
+    <h1 class="z-50 lg:h-10 text-7xl my-40 md:text-9xl lg:text-9xl font-dancing lg:mt-10  md:mt-40 md:my-20">Grubeguitars</h1>
+	  <CardAbout/>  
   </main>
+ 
 </Layout>
 
 <style>
-	.back{
-		position: relative;
-		width: 100vw;
-		height: 100vh;
-		background-color:rgb(22, 0, 0);
-	}
-	.ball-back-violet{
-		position: absolute;
-		width: 500px;
-		height: 500px;
-		background-image:radial-gradient(farthest-side,rgba(58, 0, 97, 0.678), rgba(0, 0, 255, 0));
-		border-radius: 100rem;
-	}
-	.ball-back-green{
-		position: absolute;
-		margin-top: 250px;
-		margin-left: 900px;
-		width: 500px;
-		height: 500px;
-		background-image:radial-gradient(farthest-side,rgba(0, 97, 16, 0.226), rgba(0, 0, 255, 0));
-		border-radius: 100rem;
-
-	}
+  main {
+    position: absolute;
+  
+    background: linear-gradient(rgb(46, 20, 0), rgba(0, 0, 255, 0));
+  }
+  .ball-back-violet {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: radial-gradient(
+      farthest-side,
+      rgba(68, 40, 77, 0.478),
+      rgba(0, 0, 255, 0)
+    );
+    border-radius: 100rem;
+  }
+  .ball-back-green {
+    position: absolute;
+    margin-top: 250px;
+    margin-left: -250px;
+    width: 500px;
+    height: 500px;
+    background-image: radial-gradient(
+      farthest-side,
+      rgba(10, 27, 16),
+      rgba(0, 0, 255, 0)
+    );
+    border-radius: 100rem;
+  }
 </style>
-

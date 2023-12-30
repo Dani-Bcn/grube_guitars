@@ -1,0 +1,121 @@
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <p class="text-[2rem] font-Righteous text-center">Sebastian Grube</p>
+        <img src="/public/sebastian.webp" alt="img1" class="my-5" />
+        <p class="font-Righteous ">Luthier de guitarras y bajos</p>
+      </div>
+      <div class="flip-card-back  text-start">
+        <p class="font-bad flex font-light text-orange-200  text-[1rem] px-10  text-start">
+          Hola, me llamo Sebastian Grube y desde pequeño las guitarras
+          eléctricas son mi gran pasión. Con 13 años no podía comprar una
+          guitarra y fue entonces cuando decidí hacer mi primera guitarra
+          eléctrica. Fue rápido. La corté de una tabla de chapas de madera, los
+          trastes eran guías de tren de juguete, el puente era de aluminio
+          doblado y la pastilla un magneto eléctrico de juguete. La guitarra no
+          tenía nada de ver con las guitarras que puedes comprar...pero
+          funcionaba! Desde entonces he ido perfeccionando mis instrumentos,
+          siempre buscando el mejor sonido y tacto.
+        </p>       
+      </div>
+    </div>
+  </div>
+<!--   <div class="mt-20">
+  <input type="checkbox" name="check" id="check" class="check">
+ <label for="check" class="button">button</label>
+ <div class="coco">Coco</div>
+</div> -->
+ 
+<style>
+  
+
+  img {
+    width: 130px;
+    clip-path: circle(50% at 50% 50%);
+    transition:0.5s
+  }
+  .flip-card {
+  
+    
+   border-radius: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    width: 400px;
+    height: 300px;
+    perspective: 10000px;
+    font-family: sans-serif;   
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;  
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    transition:2s;
+    animation-delay: 0.5s;
+  }
+  @media (min-width: 400px)  {
+    .flip-card{
+        margin-top: 50px;
+  }
+  }
+  @media (max-width: 400px) {
+    .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    width:400px;
+  }
+}
+@media (min-width: 400px) {
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    width:400px;
+  }
+}
+/* 
+ #check:checked ~ .coco{       
+        transform: rotateY(180deg);
+        transition:0.5s;
+    color: red;
+    } */
+ 
+  .flip-card-front,
+  .flip-card-back {
+   
+    position: absolute;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background: linear-gradient(
+      130deg,
+      rgba(255, 228, 196, 0) 20%,
+      rgba(240, 222, 255,0.1) 88%,
+      rgba(49, 0, 128,0.1) 40%,
+    );
+    color: coral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flip-card-back {
+    background: linear-gradient(
+      130deg,
+      rgba(255, 228, 196, 0) 20%,
+      rgba(240, 222, 255,0.1) 88%,
+      rgba(49, 0, 128,0.1) 40%,
+    );
+    color: white;
+    transform: rotateY(180deg);
+  }
+</style>
