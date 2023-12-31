@@ -1,14 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
+import CustomGuitars from "../components/custom-guitars.astro";
 ---
 
 <Layout title="Grube_guitars">
   <main
-    class="w-screen h-[200vh] flex bg-gradient-to-b from-indigo-950/[0.2] to-indigo-800/[0]"
+    class="w-screen h-[100vh] flex flex-col items-center bg-gradient-to-b from-indigo-950/[0.2] to-indigo-800/[0]"
   >
-    <div
-      class="absolute w-full h-full bg-gradient-to-b from-red-900/[0] to-indigo-950/[0.5]"
+    <div id="back-triangle"
+      class="absolute w-[90vw] -ml-0 lg:-ml-5 h-full bg-gradient-to-b from-indigo-950/[0] to-indigo-300/[0.5]"
     >
     </div>
     <section class="z-50 w-full flex flex-col justify-start items-center">
@@ -17,18 +17,18 @@ import Layout from "../layouts/Layout.astro";
       >
         Grubeguitars
       </h1>
-      <h2 class="text-3xl font-Righteous text-slate-300 p-10">
+      <h2 class="text-3xl font-Righteous text-slate-300 pb-10">
         <span>Sebastian</span> Grube
       </h2>
       <h3 class="text-2xl font-Righteous text-slate-300">
         <span>Luthier</span> de guitarras y bajos
       </h3>
     </section>
+    <CustomGuitars/>
   </main>
 </Layout>
-
 <style>
-  div {
+  #back-triangle {
     clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0% 50%);
   }
   span {
