@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+const gutitars = [
+  "https://image.jimcdn.com/app/cms/image/transf/none/path/s02fcfe714ac4156b/image/i1fc361bce83bcae7/version/1532790261/image.jpg",
+  "https://image.jimcdn.com/app/cms/image/transf/none/path/s02fcfe714ac4156b/image/id1cb9f930a192b75/version/1532790375/image.jpg",
+  "https://image.jimcdn.com/app/cms/image/transf/none/path/s02fcfe714ac4156b/image/icbb48bd6cdf81126/version/1532790375/image.jpg",
+  "https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s02fcfe714ac4156b/image/i630fbf8f52318d9c/version/1700067185/image.jpg",
+  "https://image.jimcdn.com/app/cms/image/transf/none/path/s02fcfe714ac4156b/image/icef74ef08af3f68c/version/1700067185/image.jpg",
+  "https://image.jimcdn.com/app/cms/image/transf/none/path/s02fcfe714ac4156b/image/i961aa576f9b66166/version/1700067185/image.jpg",
+  "https://image.jimcdn.com/app/cms/image/transf/none/path/s02fcfe714ac4156b/image/i82e60a38f98e9f02/version/1700067185/image.jpg",
+  "https://image.jimcdn.com/app/cms/image/transf/none/path/s02fcfe714ac4156b/image/i4df8e9779649ff59/version/1700067185/image.jpg",
+  "https://image.jimcdn.com/app/cms/image/transf/none/path/s02fcfe714ac4156b/image/ifed2d1b5c89734f4/version/1700067185/image.jpg",
+  "https://image.jimcdn.com/app/cms/image/transf/none/path/s02fcfe714ac4156b/image/i7c9f76cda0c558fa/version/1700067185/image.jpg",
+  "https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/s02fcfe714ac4156b/image/ic8f2620aef5c54ed/version/1700067185/image.jpg",
+
+];
+---
+
+<main class="w-[90vw] h-screen m-auto flex flex-col justify-center items-center mt-52">
+  <div
+  class="absolute z-10 w-[90vw] -ml-0 lg:-ml-5 h-full bg-gradient-to-t to-orange-950/[0.2] from-slate-800/[1] "
+>
+</div>
+  <h1 class="z-50 text-indigo-200 text-5xl font-Righteous pb-20 -mt-20"><span>Guitarras</span> personalizadas</h1>
+  <nav class="z-50  flex flex-wrap justify-center gap-5">
+    {
+      gutitars.map((img, i) => (
+        <a href="/page-slider">
+          <img  class="w-40 h-40 bg-center bg-no-repeat bg-cover" style={`background-image:url(${img})`} />
+        </a>
+      ))
+    }
+  </nav>
+
+  <style>
+    div {
+      clip-path: polygon(0 50%, 50% 0, 100% 50%, 100% 100%, 0% 100%);
+    }
+    span{
+      color: wheat;
+    }
+  </style>
+</main>
