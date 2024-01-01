@@ -5,27 +5,41 @@ import CustomGuitars from "../components/custom-guitars.astro";
 
 <Layout title="Grube_guitars">
   <main
-    class="w-screen h-[100vh]  flex flex-col items-center bg-gradient-to-b from-indigo-950/[0.2] to-indigo-800/[0]"
+    class="w-screen h-[100vh] flex flex-col items-center bg-gradient-to-b from-indigo-950/[0.2] to-indigo-800/[0]"
   >
-    <div id="back-triangle"
-      class="absolute w-[90vw]  lg:-ml-5 h-full bg-gradient-to-b from-indigo-950/[0] to-indigo-300/[0.5]"
+    <img
+      src="/public/assets/guitar-1.png"
+      alt=""
+      width={800}
+      class="absolute z-50 blur-3xl -mt-96"
+    />
+    <section
+      class="z-50 w-full flex flex-col justify-start items-center mt-52 md:mt-20"
     >
-    </div>
-    <section class="z-50 w-full flex flex-col justify-start items-center mt-52 md:mt-20">
       <h1
         class="text-7xl md:text-9xl h-20 md:h-40 text-center bg-clip-text text-transparent font-dancing bg-gradient-to-r from-slate-200 to-orange-300/[0.7]"
       >
         Grubeguitars
       </h1>
+      <h2
+        class="absolute mt-[185px] -tracking-[0.05em] text-8xl font-Righteous bg-gradient-to-b from-slate-50/[0.05] contrast-96 w-full flex justify-center to-black/[0] bg-clip-text text-transparent"
+      >
+        Sebastian
+      </h2>
       <h2 class="text-3xl font-Righteous text-slate-300 py-20">
         <span>Sebastian</span> Grube
+      </h2>
+      <h2
+        class="absolute mt-[280px] -tracking-[0.05em] text-9xl font-Righteous bg-gradient-to-b from-slate-50/[0.05] contrast-96 w-full flex justify-center to-black/[0] bg-clip-text text-transparent"
+      >
+        Luthier
       </h2>
       <h3 class="text-2xl font-Righteous text-slate-300">
         <span>Luthier</span> de guitarras y bajos
       </h3>
     </section>
-   
-    <CustomGuitars/>
+
+    <CustomGuitars />
   </main>
 </Layout>
 <style>
@@ -34,5 +48,36 @@ import CustomGuitars from "../components/custom-guitars.astro";
   }
   span {
     color: rgb(224, 193, 152);
+  }
+
+  h1 {
+    animation-name: mov;
+    animation-duration: 3s;
+  }
+  img {
+    animation-name: guitar;
+    animation-duration: 5s;
+    rotate: 90deg;
+    filter: blur(20px);
+  }
+
+  @keyframes mov {
+    0% {
+      transform: translateY(15px);
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes guitar {
+    0% {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 </style>
