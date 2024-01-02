@@ -1,36 +1,33 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CustomGuitars from "../components/custom-guitars.astro";
+
 ---
+
 
 <Layout title="Grube_guitars">
   <main
     class="w-screen h-[100vh] flex flex-col items-center bg-gradient-to-b from-indigo-950/[0.2] to-indigo-800/[0]"
   >
-    <img
-      src="/public/assets/guitar-1.png"
-      alt=""
-      width={800}
-      class="absolute z-50 blur-3xl -mt-96"
-    />
     <section
-      class="z-50 w-full flex flex-col justify-start items-center mt-52 md:mt-20"
+      class="z-50   w-full flex flex-col justify-start items-center mt-52 md:mt-20"
     >
       <h1
-        class="text-7xl md:text-9xl h-20 md:h-40 text-center bg-clip-text text-transparent font-dancing bg-gradient-to-r from-slate-200 to-orange-300/[0.7]"
+        class="text-7xl md:text-9xl font-bold md:font-extralight   h-20 md:h-40 text-center bg-clip-text text-transparent font-dancing bg-gradient-to-r from-slate-200 to-orange-300/[0.7]"
       >
         Grubeguitars
       </h1>
       <h2
-        class="absolute mt-[185px] -tracking-[0.05em] text-8xl font-Righteous bg-gradient-to-b from-slate-50/[0.05] contrast-96 w-full flex justify-center to-black/[0] bg-clip-text text-transparent"
+      
+        class="absolute mt-[120px] md:mt-[180px] -tracking-[0.05em] text-8xl font-Righteous bg-gradient-to-b from-orange-400/[0.08] contrast-96 w-full flex justify-center to-black/[0] bg-clip-text text-transparent"
       >
         Sebastian
       </h2>
-      <h2 class="text-3xl font-Righteous text-slate-300 py-20">
+      <h3 class="text-3xl font-Righteous text-slate-300 py-20">
         <span>Sebastian</span> Grube
-      </h2>
+      </h3>
       <h2
-        class="absolute mt-[280px] -tracking-[0.05em] text-9xl font-Righteous bg-gradient-to-b from-slate-50/[0.05] contrast-96 w-full flex justify-center to-black/[0] bg-clip-text text-transparent"
+        class="absolute mt-[210px] md:mt-[280] -tracking-[0.05em] text-9xl font-Righteous bg-gradient-to-b from-orange-400/[0.08]  contrast-96 w-full flex justify-center to-black/[0] bg-clip-text text-transparent"
       >
         Luthier
       </h2>
@@ -54,26 +51,37 @@ import CustomGuitars from "../components/custom-guitars.astro";
     animation-name: mov;
     animation-duration: 3s;
   }
-  img {
-    animation-name: guitar;
-    animation-duration: 5s;
-    rotate: 90deg;
-    filter: blur(20px);
+  h2{
+    animation: guitar;
+    animation-duration: 3s;
   }
+  h3{
+    animation: mov2;
+    animation-duration: 3s;
+  }
+
 
   @keyframes mov {
     0% {
-      transform: translateY(15px);
+      transform: translateY(-20px);
       opacity: 0;
     }
-
-    100% {
+    100% {  transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes mov2 {
+    0% {
+      transform: translateY(-60px);
+      opacity: 0;
+    }
+    100% {  transform: translateY(0px);
       opacity: 1;
     }
   }
   @keyframes guitar {
     0% {
-      transform: translateX(-20px);
+      transform: translateY(20px);
       opacity: 0;
     }
     100% {
